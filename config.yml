@@ -23,7 +23,7 @@ DISABLE_PRESENCE: false
 PRESENCES:
   - How can I assist you?
   - Currently in {guild_count} guilds
-  - Support at https://discord.gg/codexdev
+  - Support at 
 
 
 BLACKLIST_WORDS: #changed to cogs/imagine.py

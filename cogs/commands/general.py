@@ -443,7 +443,7 @@ class General(commands.Cog):
           name="<:zyroxlinks:1448949436939239495> Quick Actions",
           value=(
               ">>> **[Invite Zyrox](https://discord.com/oauth2/authorize?client_id=1396114795102470196&permissions=8&integration_type=0&scope=bot+applications.commands)**\n"
-              "**[Support Server](https://discord.gg/codexdev)**"
+              "**[Support Server]( )**"
           ),
           inline=False
       )

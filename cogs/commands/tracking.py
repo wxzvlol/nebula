@@ -128,7 +128,7 @@ class Tracking(commands.Cog):
                 f"**Fake:** `{fake}`\n"
                 f"**Left:** `{left}`\n"
                 f"**Rejoins:** `{rejoin}`\n\n"
-                f"{EMOJI_INVITE} **Get Zyrox Premium Lifetime [Join Support Here](https://discord.gg/codexdev)**"
+                f"{EMOJI_INVITE} **Get Zyrox Premium Lifetime [Join Support Here]( )**"
             )
         )
         embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)

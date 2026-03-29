@@ -41,7 +41,7 @@ class MentionDropdown(discord.ui.Select):
             embed.title = "<:zyroxlinks:1448949436939239495> Important Links"
             embed.description = (
                 "**[Invite Zyrox X](https://discord.com/oauth2/authorize?client_id=1396114795102470196)**\n"
-                "**[Join Support Server](https://discord.gg/codexdev)**"
+                "**[Join Support Server]( )**"
             )
 
         embed.set_footer(text="Powered by Zyrox Development™", icon_url=self.bot.user.avatar.url)

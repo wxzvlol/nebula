@@ -126,7 +126,7 @@ async def on_command_completion(context: commands.Context) -> None:
             embed.add_field(name="User (DM)", value=f"{context.author.mention} (`{context.author.id}`)", inline=False)
         
         embed.timestamp = discord.utils.utcnow()
-        embed.set_footer(text="Zyrox X Development™ ❤️", icon_url=client.user.display_avatar.url)
+        embed.set_footer(text="Nebula | Made with ❤️", icon_url=client.user.display_avatar.url)
         
         try:
             await webhook.send(embed=embed)

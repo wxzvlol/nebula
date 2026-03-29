@@ -16,14 +16,14 @@ class Autorole(Cog):
         async for entry in guild.audit_logs(limit=3):
             if entry.action == discord.AuditLogAction.bot_add:
                 embed = discord.Embed(
-                   description=f"<:zmodule:1448951340716785744> **Thanks for adding me.**\n\n<a:ArrowRed:1448951520077811806> My default prefix is `>`\n<a:ArrowRed:1448951520077811806>> Use the `>help` command to see a list of commands\n<a:ArrowRed:1448951520077811806> For detailed guides, FAQ and information, visit our **[Support Server](https://discord.gg/codexdev)**",
+                   description=f"<:zmodule:1448951340716785744> **Thanks for adding me.**\n\n<a:ArrowRed:1448951520077811806> My default prefix is `>`\n<a:ArrowRed:1448951520077811806>> Use the `>help` command to see a list of commands\n<a:ArrowRed:1448951520077811806> For detailed guides, FAQ and information, visit our **[Support Server]( )**",
                     color=0xFF0000
                )
                 embed.set_thumbnail(url=entry.user.avatar.url if entry.user.avatar else entry.user.default_avatar.url)
                 embed.set_author(name=f"{guild.name}", icon_url=guild.me.display_avatar.url)
                
                 website_button = Button(label='Website', style=discord.ButtonStyle.link, url='https://.vercel.app')
-                support_button = Button(label='Support', style=discord.ButtonStyle.link, url='https://discord.gg/codexdev')
+                support_button = Button(label='Support', style=discord.ButtonStyle.link, url=' ')
                 vote_button = Button(label='Vote for Me', style=discord.ButtonStyle.link, url=f'https://top.gg/bot/{self.bot.user.id}/vote')
                 view = View()
                 view.add_item(support_button)

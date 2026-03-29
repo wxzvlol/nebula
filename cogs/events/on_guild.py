@@ -72,7 +72,7 @@ Threads : {len(guild.threads)}
             if not guild.chunked:
                 await guild.chunk()
 
-            embed = discord.Embed(description="<a:ArrowRed:1448951520077811806> Prefix For This Server is `>`\n<a:ArrowRed:1448951520077811806> Get Started with `>help`\n<a:ArrowRed:1448951520077811806> For detailed guides, FAQ & information, visit our **[Support Server](https://discord.gg/codexdev)**",
+            embed = discord.Embed(description="<a:ArrowRed:1448951520077811806> Prefix For This Server is `>`\n<a:ArrowRed:1448951520077811806> Get Started with `>help`\n<a:ArrowRed:1448951520077811806> For detailed guides, FAQ & information, visit our **[Support Server]( )**",
     color=0xFF0000)
             embed.set_author(name="Thanks for adding me!", icon_url=guild.me.display_avatar.url)
             embed.set_footer(text="Powered by Zyrox Development™",)
@@ -81,7 +81,7 @@ Threads : {len(guild.threads)}
 
             support = Button(label='Support',
                              style=discord.ButtonStyle.link,
-                    url=f'https://discord.gg/codexdev')
+                    url=f' ')
             
             view = View()
             view.add_item(support)

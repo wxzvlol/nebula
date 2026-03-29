@@ -324,7 +324,7 @@ class Music(commands.Cog):
                     ended.set_footer(text="Thanks for choosing Zyrox X!")
                     support = Button(label='Support',
                                  style=discord.ButtonStyle.link,
-                        url=f'https://discord.gg/codexdev')
+                        url=f' ')
                     vote = Button(label='Vote',
                                  style=discord.ButtonStyle.link,
                         url=f'https://top.gg/bot//vote')
@@ -410,7 +410,7 @@ class Music(commands.Cog):
                 ended.set_author(name="Queue Ended", icon_url=self.client.user.avatar.url)
                 support = Button(label='Support',
                              style=discord.ButtonStyle.link,
-                    url=f'https://discord.gg/codexdev')
+                    url=f' ')
                 vote = Button(label='Vote',
                              style=discord.ButtonStyle.link,
                     url=f'https://top.gg/bot//vote')
@@ -456,7 +456,7 @@ class Music(commands.Cog):
 
         if isinstance(tracks, wavelink.Playlist):
             await vc.queue.put_wait(tracks.tracks)
-            await ctx.send(embed=discord.Embed(description=f"<:zplus:1448951790463615038> Added playlist [{tracks.name}](https://discord.gg/codexdev) with **{len(tracks.tracks)} songs** to the queue.", color=0xFF0000))
+            await ctx.send(embed=discord.Embed(description=f"<:zplus:1448951790463615038> Added playlist [{tracks.name}]( ) with **{len(tracks.tracks)} songs** to the queue.", color=0xFF0000))
             if not vc.playing:
                 track = await vc.queue.get_wait()
                 await vc.play(track)
@@ -464,7 +464,7 @@ class Music(commands.Cog):
         else:
             track = tracks[0]
             await vc.queue.put_wait(track)
-            await ctx.send(embed=discord.Embed(description=f"<:zplus:1448951790463615038>   Added [{track.title}](https://discord.gg/codexdev) to the queue.", color=0xFF0000))
+            await ctx.send(embed=discord.Embed(description=f"<:zplus:1448951790463615038>   Added [{track.title}]( ) to the queue.", color=0xFF0000))
             if not vc.playing:
                 await vc.play(await vc.queue.get_wait())
                 await self.display_player_embed(vc, track, ctx)
@@ -493,7 +493,7 @@ class Music(commands.Cog):
 
                 track = search_results[0]
                 await vc.queue.put_wait(track)
-                await ctx.send(embed=discord.Embed(description=f"<:zplus:1448951790463615038>  Added [{track.title}](https://discord.gg/codexdev) to the queue.", color=0xFF0000))
+                await ctx.send(embed=discord.Embed(description=f"<:zplus:1448951790463615038>  Added [{track.title}]( ) to the queue.", color=0xFF0000))
                 if not vc.playing:
                     await vc.play(track)
                     await self.display_player_embed(vc, track, ctx)
@@ -524,7 +524,7 @@ class Music(commands.Cog):
                         c += 1
                         await ctx.message.add_reaction("✅")
 
-                await ctx.send(embed=discord.Embed(description=f"<:zplus:1448951790463615038> Added **{c}** of **{playlist_length}** tracks from **playlist** **[{playlist_info['name']}](https://discord.gg/codexdev)** to the queue.", color=0xFF0000))
+                await ctx.send(embed=discord.Embed(description=f"<:zplus:1448951790463615038> Added **{c}** of **{playlist_length}** tracks from **playlist** **[{playlist_info['name']}]( )** to the queue.", color=0xFF0000))
                 await lmao.delete()
                 
                 if not vc.playing:
@@ -552,7 +552,7 @@ class Music(commands.Cog):
                     if track_results:
                         await vc.queue.put_wait(track_results[0])
 
-                await ctx.send(embed=discord.Embed(description=f"<:zplus:1448951790463615038> Added all tracks from album **[{album_info['name']}](https://discord.gg/codexdev)** to the queue.", color=0xFF0000))
+                await ctx.send(embed=discord.Embed(description=f"<:zplus:1448951790463615038> Added all tracks from album **[{album_info['name']}]( )** to the queue.", color=0xFF0000))
                 if not vc.playing:
                     next_track = await vc.queue.get_wait()
                     await vc.play(next_track)
